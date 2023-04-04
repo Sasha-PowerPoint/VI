@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-   <iframe src={`https://avito.ru${location.pathname}`} ></iframe>
+   <iframe src={`https://m.avito.ru${location.pathname}`} ></iframe>
     <ModalComp />
    </>
   );
